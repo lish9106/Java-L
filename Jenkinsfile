@@ -16,13 +16,5 @@ pipeline {
                 }
             }    
         }
-
-        stage ('Deploy Stage'){
-            steps{
-                withMaven(maven:'maven3.8.2'){
-                sh 'mvn deploy'
-                }
-            }    
-        }
     }   
 }
