@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'J-slave-1' }
     stages {
         stage ('Compile Stage'){
             steps{
