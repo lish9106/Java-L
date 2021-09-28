@@ -8,11 +8,10 @@ pipeline {
                 }
             }
         }
-
-        stage ('Test Stage'){
+        stage ('Build Stage'){
             steps{
                 withMaven(maven:'maven3.8.2'){
-                sh 'mvn test'
+                sh 'mvn package'
                 }
             }    
         }
